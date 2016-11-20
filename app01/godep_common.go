@@ -1,7 +1,7 @@
 package main
 
 import (
-	"common_c"
+	"app01/common_c"
 	"fmt"
 )
 
