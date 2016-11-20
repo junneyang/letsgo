@@ -1,8 +1,9 @@
 package main
 
 import (
-	"app01/common_c"
 	"fmt"
+
+	"github.com/junneyang/letsgo/common"
 )
 
 func main() {
