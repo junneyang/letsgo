@@ -1,0 +1,147 @@
+package main
+
+import (
+	"fmt"
+	//"mymath"
+	"errors"
+	"myhello"
+	"strings"
+)
+
+func main() {
+	//	fmt.Printf("Hello, world. Sqrt(2) = %v\n", mymath.Sqrt(2))
+
+	//	//	var a, b, c int64 = 1, 2, 3
+	//	//	fmt.Printf("a = %d, b = %d, c = %d\n", a, b, c)
+	//	//	var d int64
+	//	//	fmt.Printf("d = %d\n", d)
+
+	//	var a int
+	//	var b float32
+	//	var c bool
+	//	var d string
+	//	var e []int
+	//	var f map[string]int
+	//	var g *int
+	//	if "" == d {
+	//		fmt.Print("d is \"\" \n")
+	//	}
+	//	if nil == e {
+	//		fmt.Print("e is nil \n")
+	//	}
+	//	if nil == f {
+	//		fmt.Print("f is nil \n")
+	//	}
+	//	if nil == g {
+	//		fmt.Print("g is nil \n")
+	//	}
+	//	fmt.Println(a, b, c, d, e, f, g)
+
+	a, b := 123, false
+	fmt.Println(a, b)
+
+	const PI float64 = 3.1415926
+	const MaxThread int8 = 8
+	fmt.Println(PI, MaxThread)
+
+	//	var aa int = 12
+	//	var bb int32 = 24
+	//	cc := aa + bb
+
+	var c1 complex128 = 1 + 1i
+	var c2 complex128 = 1 + 2i
+	var c3 complex128 = c1 * c2
+	fmt.Println(c3)
+
+	var str1 string = `"How Are You?"`
+	fmt.Println(str1)
+	//str1[0] = 'X'
+	str2 := strings.Replace(str1, "o", "OOO", -1)
+	fmt.Println(str2)
+	fmt.Println(str1 + str2)
+	fmt.Println(str2[1:5])
+
+	//	err := errors.New("emit macho dwarf: elf header corrupted")
+	var err error = errors.New("emit macho dwarf: elf header corrupted")
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	hello.SayHello("JunneYang")
+
+	var list1 [5]int64 = [...]int64{1, 2, 3, 4, 5}
+	list2 := [...]int64{1, 2, 3, 4, 5}
+	fmt.Println(list1)
+	fmt.Println(list2)
+
+	doubleArray := [2][4]int{[4]int{1, 2, 3, 4}, [4]int{5, 6, 7, 8}}
+	easyArray := [2][4]int{{1, 2, 3, 4}, {5, 6, 7, 8}}
+	fmt.Println(doubleArray)
+	fmt.Println(easyArray)
+
+	var slice []byte = []byte{'a', 'b', 'c', 'd'}
+	fmt.Println(slice)
+
+	slice1 := list1[0:5]
+	slice2 := list1[:]
+	fmt.Println(slice1)
+	fmt.Println(slice2)
+	slice1[0] = 111
+	fmt.Println(slice1)
+	fmt.Println(slice2)
+	fmt.Println(list1)
+
+	slice3 := list1[0:3:3]
+	fmt.Println(slice3)
+	fmt.Println(len(slice3))
+	fmt.Println(cap(slice3))
+	slice3 = append(slice3, 88)
+	fmt.Println(slice3)
+
+	fmt.Println(list1)
+
+	var map1 map[string]string = make(map[string]string)
+	fmt.Println(map1)
+	fmt.Println(map1 == nil)
+
+	var map2 *map[string]string = new(map[string]string)
+	fmt.Println(map2)
+	fmt.Println(map2 == nil)
+	fmt.Println(*map2)
+	fmt.Println(*map2 == nil)
+	//	var map1 map[string]string
+	map1["aaa"] = "AAA"
+	map1["bbb"] = "BBB"
+	map1["ccc"] = "CCC"
+	fmt.Println(map1)
+	fmt.Println(len(map1))
+
+	var slicemake []int64 = make([]int64, 2, 2)
+	fmt.Println(slicemake)
+	fmt.Println(slicemake == nil)
+	fmt.Println(len(slicemake))
+	fmt.Println(cap(slicemake))
+
+	//	slicemake = append(slicemake, 456)
+	//	fmt.Println(slicemake)
+	//	fmt.Println(len(slicemake))
+	//	fmt.Println(cap(slicemake))
+
+	slicemake1 := append(slicemake, 123)
+	slicemake2 := append(slicemake1, 456)
+
+	fmt.Println(slicemake)
+	fmt.Println(len(slicemake))
+	fmt.Println(cap(slicemake))
+
+	fmt.Println(slicemake1)
+	fmt.Println(len(slicemake1))
+	fmt.Println(cap(slicemake1))
+
+	fmt.Println(slicemake2)
+	fmt.Println(len(slicemake2))
+	fmt.Println(cap(slicemake2))
+
+	var uint1 uint
+	fmt.Println(uint1)
+}

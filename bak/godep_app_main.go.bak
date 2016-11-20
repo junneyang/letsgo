@@ -1,0 +1,10 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	c, err := Functest(12, 13)
+	fmt.Println(c, err)
+}

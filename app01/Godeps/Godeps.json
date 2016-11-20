@@ -1,0 +1,16 @@
+{
+	"ImportPath": "app01",
+	"GoVersion": "go1.7",
+	"GodepVersion": "v75",
+	"Deps": [
+		{
+			"ImportPath": "common",
+			"Rev": "d5132a406cc12d581395f3b00ec7ea6343c8957d"
+		},
+		{
+			"ImportPath": "github.com/pkg/errors",
+			"Comment": "v0.8.0-2-g248dadf",
+			"Rev": "248dadf4e9068a0b3e79f02ed0a610d935de5302"
+		}
+	]
+}
